@@ -9,6 +9,9 @@ RSpec.describe 'GET /api/v1/person' do
   subject { response }
 
   it 'should be successful' do
+
+    p response
+
     expect(response.status).to eq 200
   end
 
