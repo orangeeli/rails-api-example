@@ -1,7 +1,7 @@
 person ||= person
 
 json.id person['id']
-json.name person['first_name']
+json.first_name person['first_name']
 json.last_name person['last_name']
 
 json.addresses person.addresses.each do |address|

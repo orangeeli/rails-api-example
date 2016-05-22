@@ -22,10 +22,14 @@ gem 'mongoid', git: 'https://github.com/mongodb/mongoid.git', branch: 'master'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
-  gem 'factory_girl'
+  gem 'factory_girl_rails', '~> 4.0'
   %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
     gem lib, :git => "https://github.com/rspec/#{lib}.git", :branch => 'master'
   end
+  gem 'faker'
+  gem 'rspec-its'
+  gem 'rspec_json_schema_matcher', :path => '../rspec_json_schema_matcher'
+  # gem 'rspec_json_schema_matcher', :git => 'git@github.com:orangeeli/rspec_json_schema_matcher.git', :branch => 'rspec-core-bump-to-3.5'
 end
 
 group :development do
