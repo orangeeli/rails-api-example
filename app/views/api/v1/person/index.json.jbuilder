@@ -1,2 +1,6 @@
-json.people @persons, partial: 'api/v1/person/show', as: :person
-json.total_count @persons.respond_to?(:total_entries) ? @persons.total_entries : @persons.to_a.count
+# https://github.com/rails/jbuilder/issues/5 because 1.8.7 is not dead yet
+json.people @people.each do |json, person|
+  json.partial! 'api/v1/person/show', :person => person
+end
+
+json.total_count @people.respond_to?(:total_entries) ? @people.total_entries : @people.to_a.count

@@ -4,7 +4,11 @@ module Api
 
       def index
 
-        @persons = Person.all
+        @people = Person.all
+
+        respond_to do |format|
+          format.json
+        end
 
       end
 

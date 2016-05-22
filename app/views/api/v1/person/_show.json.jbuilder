@@ -1,6 +1,6 @@
 person ||= person
 
-json.id person['id']
+json.id person['_id']
 json.first_name person['first_name']
 json.last_name person['last_name']
 

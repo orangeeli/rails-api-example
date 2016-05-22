@@ -2,12 +2,11 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.6'
-gem 'rails-api'
+gem 'rails', '3.0.3'
 # Use Puma as the app server
-gem 'puma', '~> 3.0'
+# gem 'puma', '~> 3.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.0'
+gem 'jbuilder', '= 1.5.3'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -19,23 +18,16 @@ gem 'jbuilder', '~> 2.0'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
 gem 'mongoid'
+gem 'rake', '~> 10.5.0'
+gem 'i18n', '~> 0.6.11'
+# prior to ruby 1.9.2, ruby doesn't have json gem by default https://github.com/intridea/multi_json. This is needed for multijson
+gem 'json', '=1.8.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
-  gem 'factory_girl_rails', '~> 4.0'
+  gem 'factory_girl_rails', '= 1.1.0'
   gem 'rspec-rails', '~> 3.4'
-  gem 'faker'
+  gem 'faker', '=0.3.1'
   gem 'rspec-its'
-  gem 'rspec_json_schema_matcher'
+  gem 'rspec_json_schema_matcher', :git => 'https://github.com/orangeeli/rspec_json_schema_matcher', :branch => 'because-ruby-1.8.7-not-quite-dead-yet'
 end
-
-group :development do
-  gem 'listen', '~> 3.0.5'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
-end
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
