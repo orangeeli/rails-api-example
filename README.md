@@ -1,24 +1,90 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is a small integration tests experience, using the best practices gathered from blog posts on how to test rails backend backed API's.
+The goal of this project is to support my upcoming post [How I broke the code](https://google.com). Go there and read it to get a bit more of context.
 
-Things you may want to cover:
+I decided to test the call to the endpoint since my main goal was test an actual call to the API and make sure that the 3rd party application that is consuming it,
+will get the expected payload. In other words the whole call flow to the API, an integration test.
+
+Controller tests examples will be implemented later.
+
+In the _References_ section the links of the posts that I've looked at to put up the example.
 
 * Ruby version
+    * At branches _master_ and _rails4.2.6_, the ruby version is 2.3.0
+    * At branch _rails3.0.3_, the ruby version is 1.8.7 (Long live 1.8.7)
+ 
+* Database
+    * I used _mongo_ because I like mongo. 
 
-* System dependencies
+* Gems
+    * bundler 1.12.4
+    
+### Usage ###
 
-* Configuration
+After checking out the repo, run `bundle install` to install dependencies. Then, run
+`bundle exec rspec` to run the tests.
 
-* Database creation
+### Structure ###
 
-* Database initialization
+I have defined a very simple model: 
 
-* How to run the test suite
+* Person: A person can have a
+    * first name
+    * middle name
+    * last name
+    * list of addresses
+* Address: An address has a
+    * Street
+    * City
+    * Country
 
-* Services (job queues, cache servers, search engines, etc.)
+Bellow a json example:
 
-* Deployment instructions
+```javascript
+{ 
+  "first_name":"Lothar",
+  "middle_name":"Reinhardt",
+  "last_name":"Steinhardt",
+  "addresses":
+    [
+      {
+        "street":"street1",
+        "city":"city1",
+        "country":"country1"
+      }
+    ]
+}
+```
 
-* ...
+
+#### Branch master ####
+On this branch, I'm using the latest versions of rails, rspec and mongoid as of late May 2016. 
+
+* rails 5.0.0.rc1 (which has the drier api specific rails option)
+* rspec 3.5.0.pre (Everything that was on the master branch)
+```ruby
+%w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
+  gem lib, :git => "https://github.com/rspec/#{lib}.git", :branch => 'master'
+end
+```
+* mongoid 6.0.0 (Again this was the version that it was on the master branch at that time)
+
+Besides 
+
+#### Branch _rails3.0.3_ ####
+This branch has some substantial changes compared to the other branches, due to the obviously use of legacy versions of both rails and ruby. 
+Yet this version is runnable and an example on how to run tests with a legacy project that hasn't been updated.
+
+
+### Contributing ###
+
+Bug reports, pull requests, suggestions and all that are very welcomed! =)
+
+### Licence ###
+
+The gem is available as open source under the terms of the
+[ISC License](http://opensource.org/licenses/ISC).
+
+### References ###
+
