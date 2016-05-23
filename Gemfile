@@ -28,8 +28,7 @@ group :development, :test do
   end
   gem 'faker'
   gem 'rspec-its'
-  gem 'rspec_json_schema_matcher', :path => '../rspec_json_schema_matcher'
-  # gem 'rspec_json_schema_matcher', :git => 'git@github.com:orangeeli/rspec_json_schema_matcher.git', :branch => 'rspec-core-bump-to-3.5'
+  gem 'rspec_json_schema_matcher', :git => 'git@github.com:orangeeli/rspec_json_schema_matcher.git', :branch => 'rspec-core-bump-to-3.5'
 end
 
 group :development do

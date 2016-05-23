@@ -1,4 +1,12 @@
 GIT
+  remote: git@github.com:orangeeli/rspec_json_schema_matcher.git
+  revision: 9b1c0098a90f0435858ef561fe3415508b3a0ece
+  branch: rspec-core-bump-to-3.5
+  specs:
+    rspec_json_schema_matcher (0.1.1)
+      json-schema (~> 2.5)
+
+GIT
   remote: https://github.com/mongodb/mongoid.git
   revision: 7c2ff52a0c5292b8e6bf3a9a29bbb19abae3dd5f
   branch: master
@@ -54,12 +62,6 @@ GIT
   branch: master
   specs:
     rspec-support (3.5.0.pre)
-
-PATH
-  remote: ../rspec_json_schema_matcher
-  specs:
-    rspec_json_schema_matcher (0.1.1)
-      json-schema (~> 2.5)
 
 GEM
   remote: https://rubygems.org/
