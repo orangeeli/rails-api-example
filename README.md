@@ -10,15 +10,18 @@ Controller tests examples will be implemented later.
 
 In the _References_ section the links of the posts that I've looked at to put up the example.
 
-* Ruby version
-    * At branches _master_ and _rails4.2.6_, the ruby version is 2.3.0
-    * At branch _rails3.0.3_, the ruby version is 1.8.7 (Long live 1.8.7)
- 
-* Database
-    * I used _mongo_ (3.2.6) with _mongoid_ (version varies depending on the branch). 
+*Ruby version*
 
-* Gems
-    * bundler 1.12.4
+* At branches _master_ and _rails4.2.6_, the ruby version is 2.3.0
+* At branch _rails3.0.3_, the ruby version is 1.8.7 (Long live 1.8.7)
+ 
+*Database*
+
+* I used _mongo_ (3.2.6) with _mongoid_ (version varies depending on the branch). 
+
+*Gems*
+
+* bundler 1.12.4
     
 ### Usage ###
 
