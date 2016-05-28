@@ -92,7 +92,7 @@ The only caveat is that I had to use a specific [branch version of the rspec jso
 
 Contrary to the previous branch, the purpose with this branch was to run, the project against the latest stable versions of rails, rspec and mongoid as of late May 2016.
 
-Rails API option is not available on rails 4.2.6, yet you can added as a gem dependency `gem 'rails-api'`. 
+Rails API option is not available on rails 4.2.6, yet you can add it as a gem dependency `gem 'rails-api'`. 
 
 #### Branch _rails3.0.3_ ####
 This branch has some substantial changes compared to the other branches, due to the use of legacy versions of both rails and ruby. The main issue is the map key/value declaration.
